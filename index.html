@@ -12,6 +12,69 @@
 
 	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 	<style>
+		/*Import Google fonts*/
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+		body {
+			margin: 0;
+			background-color: hsl(233, 47%, 7%);
+		}
+
+		.grid-container {
+			display: grid;
+			grid-template-columns: auto auto;
+			justify-content: center;
+			align-items: center;
+			grid-auto-rows: auto;
+		}
+
+		.card {
+			background-color: hsl(244, 38%, 16%);
+			color: white;
+			font-family: Inter;
+
+		}
+
+		.text {
+			max-width: 40ch;
+			margin: 6ch;
+		}
+
+		.text>h1 {
+			font-size: 36px;
+		}
+
+		h1>span {
+			color: hsl(277, 64%, 61%);
+		}
+
+		.text>p {
+			color: hsla(0, 0%, 100%, 0.75);
+		}
+
+		.tile-grid {
+			display: grid;
+			grid-template-columns: repeat(3, auto);
+			margin: 6ch;
+		}
+
+		.tile {}
+
+		.stat {
+			font-weight: 700;
+			font-size: 24px;
+		}
+
+		.stat-heading {
+			font-family: 'Lexend Deca';
+			font-weight: 400;
+			font-size: 13px;
+			text-transform: uppercase;
+			color: hsla(0, 0%, 100%, 0.6);
+			padding-top: 1ch;
+		}
+
 		.attribution {
 			font-size: 11px;
 			text-align: center;
@@ -24,20 +87,34 @@
 </head>
 
 <body>
-	<div class="text">
-		<h1>Get <span>insights</span> that help your business grow.</h1>
-		<p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and
-			overall efficiency.</p>
+	<div class="grid-container">
+
+		<div class="card">
+			<div class="text">
+				<h1>Get <span>insights</span> that help your business grow.</h1>
+				<p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and
+					overall efficiency.</p>
+			</div>
+			<div class="tile-grid">
+				<div class="tile">
+					<div class="stat">10k+</div>
+					<div class="stat-heading">companies</div>
+				</div>
+				<div class="tile">
+					<div class="stat">314</div>
+					<div class="stat-heading">templates</div>
+				</div>
+				<div class="tile">
+					<div class="stat">12m+</div>
+					<div class="stat-heading">queries</div>
+				</div>
+			</div>
+		</div>
+
+		<img src="./images/image-header-desktop.jpg" alt="some very happy people at work">
+
 	</div>
-	<div class="tile-grid">
-		<div class="tile">10k+ companies</div>
-		<div class="tile">314 templates</div>
-		<div class="tile">12m+ queries</div>
 	</div>
-	<img src="./images/image-header-desktop.jpg" alt="some very happy people at work">
-
-
-
 
 
 	<div class="attribution">
