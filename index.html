@@ -24,21 +24,28 @@
 		.grid-container {
 			display: grid;
 			grid-template-columns: auto auto;
-			justify-content: center;
 			align-items: center;
-			grid-auto-rows: auto;
+			justify-content: center;
+			margin: 60px 90px;
+		}
+
+		.grid-container>img {
+			border-radius: 0 8px 8px 0;
+			max-height: 100%;
+			filter: sepia(0.08) hue-rotate(232deg) saturate(40) brightness(0.65);
+
 		}
 
 		.card {
 			background-color: hsl(244, 38%, 16%);
+			border-radius: 8px 0 0 8px;
 			color: white;
 			font-family: Inter;
-
 		}
 
 		.text {
-			max-width: 40ch;
-			margin: 6ch;
+			width: 40ch;
+			padding: 2rem 4rem 0;
 		}
 
 		.text>h1 {
@@ -51,12 +58,13 @@
 
 		.text>p {
 			color: hsla(0, 0%, 100%, 0.75);
+			line-height: 2.6ch;
 		}
 
 		.tile-grid {
 			display: grid;
 			grid-template-columns: repeat(3, auto);
-			margin: 6ch;
+			padding: 4rem;
 		}
 
 		.tile {}
@@ -69,15 +77,58 @@
 		.stat-heading {
 			font-family: 'Lexend Deca';
 			font-weight: 400;
-			font-size: 13px;
+			font-size: 14px;
 			text-transform: uppercase;
 			color: hsla(0, 0%, 100%, 0.6);
 			padding-top: 1ch;
 		}
 
+		@media only screen and (max-width: 1200px) {
+			.grid-container {
+				display: flex;
+				flex-direction: column-reverse;
+
+
+			}
+
+			.grid-container>img {
+				border-radius: 8px 8px 0 0;
+				width: 460px;
+			}
+
+			.card {
+				border-radius: 0 0 8px 8px;
+			}
+
+			.text {
+				text-align: center;
+				width: 28ch;
+				font-size: 19px;
+			}
+
+			.tile-grid {
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-bottom: 2rem;
+			}
+
+			.tile {
+				text-align: center;
+				padding-top: 2rem;
+			}
+
+		}
+
+
+
 		.attribution {
 			font-size: 11px;
 			text-align: center;
+			color: hsla(0, 0%, 100%, 0.6);
+			font-family: Arial, Helvetica, sans-serif;
+			padding-bottom: 2rem;
 		}
 
 		.attribution a {
@@ -105,22 +156,21 @@
 					<div class="stat-heading">templates</div>
 				</div>
 				<div class="tile">
-					<div class="stat">12m+</div>
+					<div class="stat">12M+</div>
 					<div class="stat-heading">queries</div>
 				</div>
 			</div>
 		</div>
-
 		<img src="./images/image-header-desktop.jpg" alt="some very happy people at work">
 
-	</div>
 	</div>
 
 
 	<div class="attribution">
-		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br><br>
 		Coded by <a href="https://github.com/loganwoolf">Logan Woolf</a>.
 	</div>
+
 </body>
 
 </html>
